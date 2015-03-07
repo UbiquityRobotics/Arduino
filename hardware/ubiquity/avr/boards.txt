@@ -4,7 +4,7 @@ menu.cpu=Processor
 
 ##############################################################
 
-bus_beaglebone.name=Ubiquity busbeagle_bone
+bus_beaglebone.name=Ubiquity bus_beaglebone
 
 bus_beaglebone.upload.tool=avrdude
 bus_beaglebone.upload.protocol=arduino
@@ -49,4 +49,28 @@ bus_bridge_encoders_sonar.build.f_cpu=16000000L
 bus_bridge_encoders_sonar.build.board=AVR_BUS_BRIDGE_ENCODERS_SONAR
 bus_bridge_encoders_sonar.build.core=arduino
 bus_bridge_encoders_sonar.build.variant=standard
+
+##############################################################
+
+bus_raspberry_pi.name=Ubiquity bus_raspberry_pi
+
+bus_raspberry_pi.upload.tool=avrdude
+bus_raspberry_pi.upload.protocol=arduino
+bus_raspberry_pi.upload.maximum_size=32256
+bus_raspberry_pi.upload.maximum_data_size=2048
+bus_raspberry_pi.upload.speed=115200
+
+bus_raspberry_pi.bootloader.tool=avrdude
+bus_raspberry_pi.bootloader.low_fuses=0xFF
+bus_raspberry_pi.bootloader.high_fuses=0xDE
+bus_raspberry_pi.bootloader.extended_fuses=0x05
+bus_raspberry_pi.bootloader.unlock_bits=0x3F
+bus_raspberry_pi.bootloader.lock_bits=0x0F
+bus_raspberry_pi.bootloader.file=optiboot/optiboot_atmega328.hex
+
+bus_raspberry_pi.build.mcu=atmega324p
+bus_raspberry_pi.build.f_cpu=16000000L
+bus_raspberry_pi.build.board=AVR_BUS_RASPBERRY_PI
+bus_raspberry_pi.build.core=arduino
+bus_raspberry_pi.build.variant=atmega324p
 
