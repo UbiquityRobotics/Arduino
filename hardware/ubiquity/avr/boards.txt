@@ -52,6 +52,30 @@ bus_bridge_encoders_sonar.build.variant=standard
 
 ##############################################################
 
+bus_sonar10.name=Ubiquity bus_sonar10
+
+bus_sonar10.upload.tool=avrdude
+bus_sonar10.upload.protocol=arduino
+bus_sonar10.upload.maximum_size=32256
+bus_sonar10.upload.maximum_data_size=2048
+bus_sonar10.upload.speed=115200
+
+bus_sonar10.bootloader.tool=avrdude
+bus_sonar10.bootloader.low_fuses=0xFF
+bus_sonar10.bootloader.high_fuses=0xDE
+bus_sonar10.bootloader.extended_fuses=0x05
+bus_sonar10.bootloader.unlock_bits=0x3F
+bus_sonar10.bootloader.lock_bits=0x0F
+bus_sonar10.bootloader.file=optiboot/optiboot_atmega328.hex
+
+bus_sonar10.build.mcu=atmega328p
+bus_sonar10.build.f_cpu=16000000L
+bus_sonar10.build.board=AVR_BUS_SONAR10
+bus_sonar10.build.core=arduino
+bus_sonar10.build.variant=standard
+
+##############################################################
+
 mega.name=Ubiquity bus_loki
 
 mega.vid.0=0x2341
